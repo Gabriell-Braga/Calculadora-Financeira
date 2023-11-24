@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Amortização</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="juros.html">Juros</a></li>
+                <li><a href="taxa.html">Taxa</a></li>
+                <li><a class="active" href="amortizacao.html">Amortização</a></li>
+                <li><a href="vpl.html">VPL</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="calculadora">
+        <div id="operacoes">
+            <h2>Calculadora de Amortização SAC</h2>
+            <form id="form-amortizacao">
+                <label for="variavel">Calcular:</label>
+                <select id="variavel">
+                    <option value="" selected disabled>Selecione uma variável</option>
+                    <option value="amortizacao">Amortização</option>
+                    <option value="juros">Juros (J)</option>
+                    <option value="saldo_devedor">Saldo Devedor</option>
+                    <option value="pmt">PMT</option>
+                </select>
+                
+                <!-- Campos para inserção dos valores -->
+                <input type="number" id="valor1" placeholder="Insira o valor 1" style="display: none;">
+                <input type="number" id="valor2" placeholder="Insira o valor 2" style="display: none;">
+                <input type="number" id="valor3" placeholder="Insira o valor 3" style="display: none;">
+                <input type="number" id="valor4" placeholder="Insira o valor 4" style="display: none;">
+                
+                <button type="button" onclick="calcularOperacao()">Calcular</button>
+            </form>
+            <p id="resultado"></p>
+        </div>
+    </div>
+    <script src="assets/js/amortizacao.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Juros</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul id="nav-list">
+          <li><a class="active" href="juros.html">Juros</a></li>
+          <li><a href="taxa.html">Taxa</a></li>
+          <li><a href="amortizacao.html">Amortização</a></li>
+          <li><a href="vpl.html">VPL</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="calculadora">
+      <div id="operacoes">
+        <h2>Calculadora de Juros</h2>
+        <label for="variavel">Capitalização Composta:</label>
+        <label class="switch">
+          <input id="switch" type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <p id="mensagemCapitalizacaoSimples">Capitalização Simples Ativada</p>
+        <p id="mensagemCapitalizacaoComposta">Capitalização Composta Ativada</p>
+        <label for="variavel">Calcular:</label>
+        <select id="variavel">
+          <option value="" selected disabled>Selecione uma váriavel</option>
+          <option value="montante">Montante (VF)</option>
+          <option value="capital">Capital (VP)</option>
+          <option value="taxa">Taxa de Juros (i)</option>
+          <option value="tempo">Tempo (n)</option>
+          <option value="juros">Juros (J)</option>
+        </select>
+        
+        <input type="number" id="valor1" style="display: none;">
+        <input type="number" id="valor2" style="display: none;">
+        <input type="number" id="valor3" style="display: none;">
+        
+        <button onclick="calcularOperacao()">Calcular</button>
+        <p id="resultado"></p>
+      </div>
+
+    </div>
+    <script src="assets/js/juros.js"></script>
+  </body>
+</html>
+

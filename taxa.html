@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora de Taxa</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+            <ul id="nav-list">
+                <li><a href="juros.html">Juros</a></li>
+                <li><a class="active" href="taxa.html">Taxa</a></li>
+                <li><a href="amortizacao.html">Amortização</a></li>
+                <li><a href="vpl.html">VPL</a></li>
+            </ul>
+            </nav>
+        </header>
+        <div id="calculadora">
+            <div id="operacoes">
+                <h2>Calculadora de Taxa</h2>
+                <label for="variavel">Capitalização Composta:</label>
+                <label class="switch">
+                    <input id="switch" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <p id="mensagemCapitalizacaoSimples">Capitalização Simples Ativada</p>
+                <p id="mensagemCapitalizacaoComposta">Capitalização Composta Ativada</p>
+                <label for="variavel">Calcular:</label>
+                <select id="variavel">
+                    <option value="" selected disabled>Selecione uma váriavel</option>
+                    <option value="efetiva">Taxa de Juros Efetiva (i)</option>
+                    <option value="nominal">Taxa de Juros Nominal (i<sub>c</sub>)</option>
+                </select>
+
+                <select id="variavel-composto" style="display: none">
+                    <option value="" selected disabled>Selecione uma váriavel</option>
+                    <option value="nominal">Taxa de Juros Nominal (i<sub>k</sub>)</option>
+                    <option value="proporcional">Taxa de Juros Proporcional (i<sub>p</sub>)</option>
+                    <option value="equivalente-m-M">Taxa de Juros Equivalente (m -> M)</option>
+                    <option value="equivalente-M-m">Taxa de Juros Equivalente (M -> m)</option>
+                </select>
+
+                <input type="number" id="valor1" style="display: none;">
+                <input type="number" id="valor2" style="display: none;">
+                <input type="number" id="valor3" style="display: none;">
+                
+                <!-- Botões para calcular taxa e limpar campos -->
+                <button onclick="calcularTaxa()">Calcular Taxa</button>
+                
+                <p id="resultado"></p>
+            </div>
+
+        </div>
+        <script src="assets/js/taxa.js"></script>
+    </body>
+</html>

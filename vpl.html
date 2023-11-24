@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de VPL</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="juros.html">Juros</a></li>
+                <li><a href="taxa.html">Taxa</a></li>
+                <li><a href="amortizacao.html">Amortização</a></li>
+                <li><a class="active" href="vpl.html">VPL</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="calculadora">
+        <h2>Calculadora de VPL</h2>
+        <button onclick="adicionarPeriodo()">Adicionar Período</button>
+        <table id="tabelaVPL">
+            <thead>
+                <tr>
+                    <th>Período</th>
+                    <th>Fluxo de Caixa</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Os períodos serão inseridos aqui -->
+            </tbody>
+        </table>
+        <input type="number" id="k" placeholder="Custo de Capital (k ou i)">
+        <button type="button" onclick="calcularOperacao()">Calcular</button>
+        <p id="resultado"></p>
+        <p id="resultadoTIR"></p>
+        <p id="resultadoIR"></p>
+    </div>
+    <script src="assets/js/vpl.js"></script>
+</body>
+</html>
